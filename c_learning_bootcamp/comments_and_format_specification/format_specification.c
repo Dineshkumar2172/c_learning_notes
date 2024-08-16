@@ -40,5 +40,11 @@ int main()
     printf("1234******\n");
     printf("12345*****\n");
 
+    // print X shape
+    printf("*     *\n *   *\n  * *\n   *\n");
+    printf("  * *\n *   *\n*     *\n");
+
+    // write a program that prints the year you were born
+    printf("you birth year is %d\n", 2024 - 24);
     return 0;
 }
