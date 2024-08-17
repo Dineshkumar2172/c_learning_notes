@@ -51,16 +51,36 @@ int main()
 
     int grade1; // declared variable grade1
     int grade2; // declared variable grade2
-    scanf("%d", &grade1); // take data from user and assign it to the variable grade1 using its address
+    scanf("%d", &grade1); // take data from user and assign it to the variable grade1 using its address + scanf will go to next line automatically.
     scanf("%d", &grade2); // take data from user and assign it to the variable grade2 using its address
     printf("Average = %d\n", (grade1 +  grade2)/2); // calculating average of grade1 and grade2 and printing it on screen
 
 
-    // write a program that gets input from the user and calculates year of both.
+    // CHALLENGE 1:  write a program that gets input from the user and calculates year of both.
     // we should get current year and age from user, and use it to calculate the year of birth
     int currentYear;
     int userAge;
     scanf("%d", &currentYear);
     scanf("%d", &userAge);
     printf("You were born in year %d\n", currentYear - userAge);
+
+    // CHALLENGE 2: Write a program to calculate rectangule's area.
+    // we should get two double numbers from the user, the first number should represent the height of the rectangle
+    // and the second number should represent the width of the rectangle. The program should calculate and print the Area of the
+    // given rectangle. Formula: area of rectangle = height * width.
+    double height, width;
+    scanf("%lf", &height);
+    scanf("%lf", &width);
+    printf("Area of the given rectangle : %lf\n", height * width);
+
+    // to make the above code more readable, we can rewrite it in the following way.
+    // double height, width;
+    double area;
+    printf("enter the height : ");
+    scanf("%lf", &height);
+    printf("enter the width : ");
+    scanf("%lf", &width);
+    area = height*width;
+    printf("Aread of the given rectangle : %lf\n", area);
+
 }
