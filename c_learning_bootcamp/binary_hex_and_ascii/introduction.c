@@ -57,5 +57,25 @@ int main(){
      * 4. Binary representation of value 1101 equals to 13 in decimal representation.
      */
 
+    /**
+     * HANDS ON - PRACTICE
+     * 
+     * decimal number = 137; Weight = base^position (base is 10 for decimal)
+     * 137 = 1*10^2 + 3*10^1 + 5*10^0 = 100's + 10's + 1's or units
+     * 
+     * 
+     * BINARY TO DECIMAL CONVERSION
+     * binary number = 101; weight = base^position (base is 2 for binary)
+     * 101 = 1*2^2 + 0*2^1 + 1*2^0 = 4 + 0 +1 = 5
+     * 101 is binary equivalent of decimal number 5
+     * 
+     * 
+     * 11010 = 1*2^4 + 1*2^3 + 0*2^2 + 1*2^1 + 0*2^0 = 16 + 8 + 0 + 2 + 0 = 26
+     * 11010 is binary equivalent of decimal number 26
+     * 
+     * 
+     */
+
+
     return 0;
 }
