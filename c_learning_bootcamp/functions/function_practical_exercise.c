@@ -29,6 +29,45 @@ int findMaxDigit(int inputDigit){
 }
 
 
+// Function receives a integer number as parameter and calculate factorial of the same
+// using return type as int considering factorial is used on whole numbers.
+int calculateFactorial(int inputNumber){
+
+    // factorial cannot be performed on top of negative numbers
+    // hence keeping a check to return -1 if input number of less than 0
+    if (inputNumber < 0)
+        return -1;
+
+    // inputNumber is gonna be integer number for which we have to calculate factorial.
+    // for example: factorial of 5 ==> f(5) = 1 + 2 + 3 + 4 + 5 = 15.
+    int factorial = 0;
+    // loop starts from 1 and the logic inside it gets executed for 15 times.
+    for (int i = 1; i <= inputNumber; i++){
+        factorial += i; // factorial gets increased during each iteration with value of i.
+    }
+
+    return factorial; // return the factorial of given number
+}
+
+
+// Function receives an integer from the user and check if the given integer is even
+// should return 1 of the given integer is even, and return 0 if the given integer is odd
+int isEven(int inputNumber){
+    if (inputNumber%2 == 0)
+        return 1;
+    return 0;
+}
+
+
+// Function receives an integer from the user and check if the given integer is odd
+// should return 1 of the given integer is odd, and return 0 if the given integer is even
+int isOdd(int inputNumber){
+    if (inputNumber%2 == 0)
+        return 0;
+    return 1;
+}
+
+
 int main() {
 
     // CHALLENGE1: Calculate area of a given rectangle.
@@ -49,12 +88,33 @@ int main() {
     maxDigit = findMaxDigit(inputDigit);
     printf("max digit from input two digits are : %d\n", maxDigit);
 
-    // CHALLENGE 3: 
+
+    // CHALLENGE 3: Calculate factorial of a given number
+    int inputNumber, factorialNumber;
+    printf("enter the number to calculate factorial for : "); scanf("%d", &inputNumber);
+    factorialNumber = calculateFactorial(inputNumber);
+    printf("factorial of %d is : %d\n", inputNumber, factorialNumber);
 
 
+    // CHALLENGE3: Write a function to check if a given number is even
+    int inputEvenNumber, isInputEven;
+    printf("enter the number to check if it's even : "); scanf("%d", &inputEvenNumber);
+    isInputEven = isEven(inputEvenNumber);
+    if (isInputEven == 1)
+        printf("The given number is even\n");
+    else
+        printf("The given number is not even\n");
 
 
+    // CHALLENGE4: Write a function to check if a given number is odd
+    int inputOddNumber, isInputOdd;
+    printf("enter the number to check if it's odd : "); scanf("%d", &inputOddNumber);
+    isInputOdd = isOdd(inputOddNumber);
+    if (isInputOdd == 1)
+        printf("The given number is odd\n");
+    else
+        printf("The given number is not odd\n");
 
-
+    
     return 0;
 }
