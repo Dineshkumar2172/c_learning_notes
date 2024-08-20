@@ -24,10 +24,13 @@ void printMaxInteger(int num1, int num2){
 }
 
 
-// specifying return type as int assuming number are only gonna be integers
-int returnMaxOfThree(int num1, int num2, int num3){
-    // function gets three parameters from user and return the maximum of three numbers
-    int maxOfThree; // declaring/initialising return variable
+// specifying return type as int assuming input numbers are only gonna be integers
+int returnMaxOfThree(){
+    // function gets noinput  parameters from user and return the maximum of three numbers
+    int num1, num2, num3; // these variables gets input from the user for comparison
+    int maxOfThree; // this variable is used to hold hold the return value from function
+    printf("please enter three numbers separated by space to return max of three numbers : "); scanf("%d%d%d", &num1, &num2, &num3);
+     // declaring/initialising return variable
     
     // checks if num1 is greater than other two
     if ((num1 > num2) && (num1 > num3))
@@ -38,7 +41,6 @@ int returnMaxOfThree(int num1, int num2, int num3){
         maxOfThree = num3; // assigns num3 if none of the above conditions are met
 
     return maxOfThree; // returns the final value stored inside maxOfThree
-
 }
 
 
@@ -71,10 +73,8 @@ int main() {
     printMaxInteger(num1, num2); // Function 2 to print maximum of two numbers
 
     // Function 3 to return maximum of three 3 integers
-    int num3, num4, num5; // these variables gets input from the user for comparison
-    int maxNumber; // this variable is used to hold hold the return value from function
-    printf("please enter three numbers separated by space to return max of three numbers : "); scanf("%d%d%d", &num3, &num4, &num5);
-    maxNumber = returnMaxOfThree(num3, num4, num5);
+    int maxNumber;
+    maxNumber = returnMaxOfThree();
     printf("Max of three input number provided is : %d\n", maxNumber);
 
     // Function 4 to calculate and return average between three numbers.
