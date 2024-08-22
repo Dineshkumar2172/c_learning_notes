@@ -15,6 +15,20 @@ void pointerSwap(int *a, int *b){
     *b = temp; // now, updating value in the address of b with the value stored inside temo from address of a
 }
 
+// NOTE: In C we cannot return more than one variable from a function, hence pointers are there.
+// we need to pass address of variables that needs to be updated while calling a function in c.
+void findMinMax(int num1, int num2, int *pMin, int *pMax){
+    if (num1 > num2){
+        *pMin = num2;
+        *pMax = num1;
+    } else {
+        *pMin = num2;
+        *pMax = num1;
+    }
+
+    // no need for any retun since we are updating memory address directly.
+}
+
 int main() {
     // 
     int a = 5, b = 7;
@@ -67,6 +81,12 @@ int main() {
     num2 = num1 - 3;  // 10 - 3 = 7
 
     printf("num1 = %d, num2 = %d \n", num1, num2); // num1 = 10, num2 = 7
+
+
+    int minmaxTest1 = 7, minmaxTest2 = 5;
+    int pMin, pMax;
+    findMinMax(minmaxTest1, minmaxTest2, &pMin, &pMax);
+    printf("min number os %d and max number is %d \n", pMin, pMax);
 
     return 0;
 }
