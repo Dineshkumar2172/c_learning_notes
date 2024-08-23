@@ -4,6 +4,10 @@
 #define SIZE 3
 #define PALINDROME_SIZE 10
 
+int sumOfArray(int *pArr, int size);
+
+void resetArray(int *pArr, int size);
+
 int main() {
     // CHALLENGE 1: write a program that initializes an array.
     // 3 elements should represent a date:
@@ -191,5 +195,46 @@ int main() {
 
     printf("\n");
 
+
+    // CHALLENGE 9: write a function that gets an array, size of the array
+    // find the sum of all elements in a array
+    // the function should return sum.
+    int newArr[3] = { 1,2,3 };
+    int result = 0;
+    result = sumOfArray(newArr, 3);
+    printf("sum of given array is : %d\n",result);
+
+
+
+    // CHALLENGE 10: write a function to reset all elements of an array to 0
+    int newArr1[3] = { 1,2,3 };
+    printf("before resetting : ");
+    for (size_t i = 0; i < 3; i++){
+        printf("%d", newArr1[i]);
+    }
+    resetArray(newArr1, 3);
+    printf("\nafter resetting : ");
+    for (size_t i = 0; i < 3; i++){
+        printf("%d", newArr1[i]);
+    }
+    printf("\n");
+
+
     return 0;
+}
+
+int sumOfArray(int *pArr, int size){
+    int sumValue = 0;
+    for (int i = 0; i < size; i++){
+        sumValue += pArr[i];
+    }
+    
+    return sumValue;
+}
+
+void resetArray(int *pArr, int size){
+    for (int i = 0; i < size; i++){
+        pArr[i] = 0;
+    }
+    
 }
