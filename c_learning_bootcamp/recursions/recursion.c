@@ -45,6 +45,13 @@ int findSumDigit(int n){
 }
 
 
+int countDigits(int n){
+    if(n <= 9)
+        return 1;
+    return 1 + countDigits(n/10);
+}
+
+
 int main(){
     // RECURSIONS
     /**
@@ -87,6 +94,13 @@ int main(){
     // 1. return the sum of all digits.
     int sumOfDigitsResult = findSumDigit(12345);
     printf("the sum of digits of a given number is %d\n", sumOfDigitsResult);
+
+    // example 5 - write a recursive function that
+    // 1. receives a number (num)
+    // 1. return the total digits in num.
+    int totalDigits = countDigits(12345);
+    printf("the number of digits in a given number is %d\n", totalDigits);
+
 
     return 0;
 }
