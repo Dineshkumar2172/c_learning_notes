@@ -15,6 +15,7 @@ int main(){
     // EOF -  End Of File - similar to how we have \0 used to represent the end of a string, for files we use a special character called
     // EOF (basically means -1) to indicate end of the file. This ia not actually a part of the file, but instead it's an indicator from
     // the lower level system to indicate the end of file - handly incase if you are trying to read a file using while loop.
+    // feof(<pointer_to_a_file>) - to check the end of file.
 
 
     // type of operations in fopen: fp = fopen(<file_name>, <type_of_operation>)
